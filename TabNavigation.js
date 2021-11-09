@@ -31,7 +31,7 @@ const TabNavigation= () => {
           }
          
         })}
-        options ={{header :()=> null}}
+        
         >
         <Tab.Screen name="HomeScreen" component={StackNavigation} options ={{header :()=> null}}/>
         <Tab.Screen name="CartScreen" component={CartScreen} options ={{header :()=> null}}/> 
