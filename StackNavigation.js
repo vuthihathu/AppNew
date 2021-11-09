@@ -2,7 +2,6 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 
 import DetailsScreen from './src/views/screens/DetailsScreen'
-import OnBoardScreen from './src/views/screens/OnBoardScreen';
 import HomeScreen from './src/views/screens/HomeScreen';
 import DressScreen from './src/views/screens/DressScreen';
 import CartScreen from './src/views/screens/CartScreen';
@@ -21,4 +20,4 @@ const StackNavigation = () => {
   );
 }
 
-export {StackNavigation};
+export default StackNavigation;

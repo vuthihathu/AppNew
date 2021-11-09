@@ -3,7 +3,6 @@ import React,{useState} from 'react';
 import { StyleSheet, Text, View,} from 'react-native';
 
 import DetailsScreen from './src/views/screens/DetailsScreen'
-import OnBoardScreen from './src/views/screens/OnBoardScreen';
 import HomeScreen from './src/views/screens/HomeScreen';
 import DressScreen from './src/views/screens/DressScreen';
 import CartScreen from './src/views/screens/CartScreen';
@@ -35,7 +34,7 @@ const TabNavigation= () => {
         options ={{header :()=> null}}
         >
         <Tab.Screen name="HomeScreen" component={StackNavigation} options ={{header :()=> null}}/>
-        <Tab.Screen name="CartScreen" component={CartScreen} /> 
+        <Tab.Screen name="CartScreen" component={CartScreen} options ={{header :()=> null}}/> 
     </Tab.Navigator>
     );
   };
