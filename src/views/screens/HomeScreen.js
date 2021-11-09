@@ -47,7 +47,7 @@ const HomeScreen = ({navigation}) =>{
       <View style={styles.header}>
         <View>
           <View style={{flexDirection: 'row'}}>
-            <Text style={{fontSize: 20, fontWeight: 'bold', marginLeft: 10}}>
+            <Text style={{fontSize: 20, fontWeight: 'bold', marginLeft: 10, marginTop:20}}>
               Welcome to ThuThu Shop
             </Text>
           </View>

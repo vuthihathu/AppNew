@@ -31,7 +31,7 @@ const DressScreen = ({navigation}) =>{
                 <View style = {styles.info}>
                     <Text style={styles.name}>{dress.name} </Text>
                     <View style={styles.priceRow}>
-                        <Text style={styles.price}> Giá : {dress.price}</Text>
+                        <Text style={styles.price}>{dress.price}</Text>
                         <TouchableOpacity
                         activeOpacity={0.4}
                         onPress={() => navigation.navigate('DetailsScreen', dress)}
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     },
     price :{
         flex :1,
-        fontSize :14,
+        fontSize :13,
         color :'red',
     },
     carText :{

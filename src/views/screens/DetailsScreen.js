@@ -44,10 +44,10 @@ const DetailsScreen = ({navigation, route}) => {
 export default DetailsScreen;
 const styles = StyleSheet.create({
     header :{
-        paddingVertical: 10,
+        paddingVertical: 20,
         flexDirection: 'row',
         alignItems: 'center',
-        marginHorizontal: 10,
+        marginHorizontal: 20,
     },
     container :{
         justifyContent: 'center',
