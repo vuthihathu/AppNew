@@ -70,9 +70,10 @@ const styles = StyleSheet.create({
   text :{
     fontWeight : 'bold',
     fontSize :20,
-    color : 'red',
+    color : 'white',
     fontFamily :'Open Sans',
     fontSize : 13,
+    marginTop : 40,
   },
   inputContainer :{
     width :'70%'
@@ -82,13 +83,13 @@ const styles = StyleSheet.create({
     paddingHorizontal :10 ,
     paddingVertical :10 ,
     borderRadius :10,
-    marginTop : 10,
+    marginTop : 15,
     borderWidth :2 ,
   },
   button :{
     backgroundColor :'orange',
-    width : '100%',
-    padding :15 ,
+    width : '70%',
+    padding :6 ,
     alignItems :'center',
     borderRadius :10,
   },
@@ -103,11 +104,13 @@ const styles = StyleSheet.create({
     fontWeight : '400',
     fontSize :10,
     marginTop: 10 ,
+    fontSize : 16,
   },
   linktext :{
     textDecorationLine: 'underline',
     color :'red',
     marginTop : 10 ,
+    fontSize : 13,
   }
 });
   
