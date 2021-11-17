@@ -14,7 +14,7 @@ const LoginScreen = ({navigation}) =>{
     return (
         <View style={styles.container}>
           <ImageBackground  style={styles.imgbg}
-          source = {require('../assets/background.png')}
+          source = {require('../../assets/background.png')}
          
           >
               
@@ -71,7 +71,8 @@ const styles = StyleSheet.create({
     fontWeight : 'bold',
     fontSize :20,
     color : 'red',
-    fontFamily :'Open Sans'
+    fontFamily :'Open Sans',
+    fontSize : 13,
   },
   inputContainer :{
     width :'70%'
