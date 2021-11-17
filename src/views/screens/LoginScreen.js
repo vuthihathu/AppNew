@@ -4,78 +4,88 @@ import {
     Text,
     View,
     TouchableOpacity,
-    TextInput
+    TextInput,
+    ImageBackground
 } from 'react-native';
+
+import HomeScreen from './HomeScreen';
 
 const LoginScreen = ({navigation}) =>{
     return (
         <View style={styles.container}>
-          <Text style={styles.text}>ĐĂNG NHẬP</Text>
-          <View style={styles.inputContainer}>
-            <TextInput
-              placeholder ="Tên đăng nhập "
-              style ={styles.input}
+          <ImageBackground source = {require('../../assets/backgroung.png')}>
+              
+            <Text style={styles.text}>ĐĂNG NHẬP</Text>
+            <View style={styles.inputContainer}>
+              <TextInput
+                placeholder ="Tên đăng nhập "
+                style ={styles.input}
+                >
+              </TextInput>
+
+              <TextInput
+                placeholder ="Mật khẩu"
+                style ={styles.input}
+                secureTextEntry
               >
-            </TextInput>
-    
-            <TextInput
-              placeholder ="Mật khẩu"
-              style ={styles.input}
-              secureTextEntry
-            >
-            </TextInput>
-          </View>
-          <View style={styles.buttonContainer}>
-            <TouchableOpacity
-              style={styles.button}
-              activeOpacity={0.4}
-              onPress={() => navigation.navigate('HomeScreen')}
+              </TextInput>
+            </View>
+            <View style={styles.buttonContainer}>
+              <TouchableOpacity
+                style={styles.button}
+                activeOpacity={0.4}
+                onPress={() => navigation.navigate('HomeScreen')}
               >
-              <Text style={styles.buttonText} >Login</Text>
-            </TouchableOpacity>
-          </View>
+                <Text style={styles.buttonText} >Login</Text>
+              </TouchableOpacity>
+            </View>
+
+          </ImageBackground>
           
         </View>
     );
 };
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor :'pink',
     },
     text :{
-      fontWeight : '800',
-      fontSize :20,
+        fontWeight : '400',
+        fontSize :20,
+        color : 'green',
     },
     inputContainer :{
-      width :'80%'
+        width :'70%'
     },
     input :{
-      backgroundColor :'white',
-      paddingHorizontal :15 ,
-      paddingVertical :10 ,
-      borderRadius :10,
-      marginTop : 5,
-    } ,
+        backgroundColor :'white',
+        paddingHorizontal :10 ,
+        paddingVertical :10 ,
+        borderRadius :10,
+        marginTop : 10,
+        borderWidth :2 ,
+    },
     button :{
-      backgroundColor :'orange',
-      width : '100%',
-      padding :15 ,
-      alignItems :'center',
-      borderRadius :10,
+        backgroundColor :'orange',
+        width : '100%',
+        padding :15 ,
+        alignItems :'center',
+        borderRadius :10,
     },
     buttonContainer :{
-      width : '60%',
-      justifyContent : 'center',
-      alignItems :'center',
-      marginTop :40,
+        width : '60%',
+        justifyContent : 'center',
+        alignItems :'center',
+        marginTop :40,
     },
     buttonText :{
-      color :'black',
-      fontWeight : '600',
-      fontSize :16,
+        color :'black',
+        fontWeight : '600',
+        fontSize :16,
     }
 });
   
