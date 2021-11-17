@@ -13,10 +13,10 @@ import HomeScreen from './HomeScreen';
 const LoginScreen = ({navigation}) =>{
     return (
         <View style={styles.container}>
-          <ImageBackground 
-            source = {require('../../assets/backgroung.png')}
-            style ={styles.imagebg}
-            >
+          <ImageBackground  style={styles.imgbg}
+          source = {require('../assets/background.png')}
+         
+          >
               
             <Text style={styles.text}>ĐĂNG NHẬP</Text>
             <View style={styles.inputContainer}>
@@ -39,7 +39,13 @@ const LoginScreen = ({navigation}) =>{
                 activeOpacity={0.4}
                 onPress={() => navigation.navigate('HomeScreen')}
               >
-                <Text style={styles.buttonText} >Login</Text>
+                <Text style={styles.buttonText} >Sign in</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                activeOpacity={0.4}
+                onPress={() => navigation.navigate('HomeScreen')}
+              >
+                <Text style={styles.linktext} >Don't have account ? Sign up</Text>
               </TouchableOpacity>
             </View>
 
@@ -49,50 +55,59 @@ const LoginScreen = ({navigation}) =>{
     );
 };
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor :'pink',
-    },
-    imagebg :{
-        width : 70,
-    },
-    text :{
-        fontWeight : '400',
-        fontSize :20,
-        color : 'green',
-    },
-    inputContainer :{
-        width :'70%'
-    },
-    input :{
-        backgroundColor :'white',
-        paddingHorizontal :10 ,
-        paddingVertical :10 ,
-        borderRadius :10,
-        marginTop : 10,
-        borderWidth :2 ,
-    },
-    button :{
-        backgroundColor :'orange',
-        width : '100%',
-        padding :15 ,
-        alignItems :'center',
-        borderRadius :10,
-    },
-    buttonContainer :{
-        width : '60%',
-        justifyContent : 'center',
-        alignItems :'center',
-        marginTop :40,
-    },
-    buttonText :{
-        color :'black',
-        fontWeight : '600',
-        fontSize :16,
-    }
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+
+  },
+  imgbg :{
+    height : 300,
+    width :300 , 
+    alignItems :'center',
+  },
+  text :{
+    fontWeight : 'bold',
+    fontSize :20,
+    color : 'red',
+    fontFamily :'Open Sans'
+  },
+  inputContainer :{
+    width :'70%'
+  },
+  input :{
+    backgroundColor :'white',
+    paddingHorizontal :10 ,
+    paddingVertical :10 ,
+    borderRadius :10,
+    marginTop : 10,
+    borderWidth :2 ,
+  },
+  button :{
+    backgroundColor :'orange',
+    width : '100%',
+    padding :15 ,
+    alignItems :'center',
+    borderRadius :10,
+  },
+  buttonContainer :{
+    width : '60%',
+    justifyContent : 'center',
+    alignItems :'center',
+    marginTop :40,
+  },
+  buttonText :{
+    color :'black',
+    fontWeight : '400',
+    fontSize :10,
+    marginTop: 10 ,
+  },
+  linktext :{
+    textDecorationLine: 'underline',
+    color :'red',
+    marginTop : 10 ,
+  }
 });
   
 export default LoginScreen;
