@@ -13,7 +13,10 @@ import HomeScreen from './HomeScreen';
 const LoginScreen = ({navigation}) =>{
     return (
         <View style={styles.container}>
-          <ImageBackground source = {require('../../assets/backgroung.png')}>
+          <ImageBackground 
+            source = {require('../../assets/backgroung.png')}
+            style ={styles.imagebg}
+            >
               
             <Text style={styles.text}>ĐĂNG NHẬP</Text>
             <View style={styles.inputContainer}>
@@ -52,6 +55,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor :'pink',
+    },
+    imagebg :{
+        width : 70,
     },
     text :{
         fontWeight : '400',
