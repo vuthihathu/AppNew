@@ -1,26 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import {View} from 'react-native';
 
-import DetailsScreen from './src/views/screens/DetailsScreen'
-import HomeScreen from './src/views/screens/HomeScreen';
-import DressScreen from './src/views/screens/DressScreen';
-import CartScreen from './src/views/screens/CartScreen';
-import LoginScreen from './src/views/screens/LoginScreen';
+import AppNavigation from './src/navigation';
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-const Stack = createNativeStackNavigator();
-export default function App() {
+const App = () => {
   return (
-    <NavigationContainer>
-       <Stack.Navigator screenOptions={{headerShown: false}}>
-       <Stack.Screen name="LoginScreen" component={LoginScreen} />
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
-        <Stack.Screen name="DressScreen" component={DressScreen} />
-        <Stack.Screen name="DetailsScreen" component={DetailsScreen} />
-        <Stack.Screen name="CartScreen" component={CartScreen} />
-      </Stack.Navigator>
-   </NavigationContainer>
+    <View>
+      <AppNavigation />
+    </View>
   );
-}
+};
+
+export default App;
