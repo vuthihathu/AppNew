@@ -41,7 +41,7 @@ const FillName = () => {
                 merge: true,
               });
             }}>
-            <Text> Next</Text>
+            <Text style={styles.text}>Next</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -75,6 +75,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 10,
     height: 60,
+  },
+  text: {
+    fontSize: 19,
+    padding: 10,
   },
 });
 

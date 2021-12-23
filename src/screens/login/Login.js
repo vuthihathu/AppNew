@@ -8,10 +8,15 @@ import {
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
-const Login = () => {
+const Login = ({route}) => {
   const navigation = useNavigation();
   const [email, setEmail] = useState('');
-
+  React.useEffect(() => {
+    if (route.params?.name) {
+      // Post updated, do something with `route.params.post`
+      // For example, send the post to the server
+    }
+  }, [route.params?.name]);
   return (
     <View>
       <View style={{padding: 15}}>
@@ -30,7 +35,7 @@ const Login = () => {
           onPress={() => {
             navigation.navigate({
               name: 'Home',
-              params: {email: email},
+              params: {email: email, fillname: route.params?.name},
               merge: true,
             });
           }}>
